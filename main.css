@@ -1,0 +1,483 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f7fa, #80deea); /* Light gradient background */
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    color: white;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar nav ul li {
+    margin: 0 15px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
+
+/* Centered Section */
+.centered-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-image: url('images/2.gif'); /* Replace with the path to your image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    position: relative;
+}
+
+
+.main-title {
+    font-size: 6em;
+    margin-bottom: 20px;
+    color: #002825; /* Neon red title color */
+    text-transform: uppercase;
+    font-family: 'Monoton', cursive; /* Badass futuristic font */
+    text-shadow: 0 0 10px #6e83be, 0 0 20px #6e83be, 0 0 30px #6e83be; /* Neon effect */
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0px 0px 10px #6e83be, 2px 2px 15px #6e83be, -2px -2px 20px #6e83be;
+        transform: translate(0, 0);
+    }
+    20% {
+        text-shadow: 0px 0px 5px #6e83be, 5px 5px 20px #6e83be, -5px -5px 25px #6e83be;
+        transform: translate(-5px, 5px);
+    }
+    40% {
+        text-shadow: 0px 0px 20px #6e83be, -5px -5px 25px #6e83be, 5px 5px 30px #6e83be;
+        transform: translate(5px, -5px);
+    }
+    60% {
+        text-shadow: 0px 0px 30px #6e83be, 10px 10px 40px #6e83be, -10px -10px 50px #6e83be;
+        transform: translate(-10px, 10px);
+    }
+    80% {
+        text-shadow: 0px 0px 20px #6e83be, -10px -10px 30px #6e83be, 10px 10px 40px #6e83be;
+        transform: translate(10px, -10px);
+    }
+    100% {
+        text-shadow: 0px 0px 10px #6e83be, 2px 2px 15px #6e83be, -2px -2px 20px #6e83be;
+        transform: translate(0, 0);
+    }
+}
+
+/* Centered Image */
+.centered-image {
+    max-width: 25%; /* Reduced size for focus */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #6e83be; /* Glowing red border */
+    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out; /* Smooth zoom and glow */
+    animation: zoomPulse 2.5s infinite alternate; /* Continuous pulsing effect */
+}
+
+@keyframes zoomPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 25px #222737;
+    }
+    100% {
+        transform: scale(1.05);
+        box-shadow: 0 0 45px #222737;
+    }
+}
+
+.centered-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.image-description {
+    font-weight: bold;
+    margin-top: 55px;
+    font-size: 1.5em;
+    color: #e0f7fa;
+    text-transform: uppercase;
+    font-family: 'Audiowide', cursive; /* Futuristic font */
+    letter-spacing: 1.5px;
+    overflow: hidden;
+    border-right: 2px solid #e0f7fa;
+    white-space: nowrap;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 30px;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff; /* Default color */
+    text-decoration: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif; /* Futuristic look */
+    transition: transform 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.social-link img {
+    height: 40px; /* Larger icons */
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+    filter: brightness(1.2); /* Slight glow for icons */
+    transition: filter 0.3s ease;
+}
+
+.social-link:hover {
+    color: #ffcc00; /* Hover color */
+    transform: translateY(-5px); /* Hover lift */
+}
+
+.social-link:hover img {
+    filter: brightness(2); /* Brighter icons on hover */
+}
+
+/* Mini Title for Hashtags */
+.mini-title {
+    font-size: 2em;
+    margin-top: 20px;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 0 0 10px #00b7ff;
+    margin-bottom: 0px;
+}
+
+/* Grid Section */
+.grid-section {
+    text-align: center;
+    padding: 30px;
+    background-image: url('images/Untitled\ design\ \(1\).gif'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    color: white;
+}
+
+
+.top-image {
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 25px;
+    border: 3px solid #009dff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #ffffff; /* Glowing effect around the top image */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #111;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.image-grid img:hover {
+    transform: scale(1.2); /* More dramatic zoom on hover */
+    box-shadow: 0 0 25px rgba(0, 158, 29, 0.8); /* Glowing effect on hover */
+}
+
+/* Rectangle Section */
+.rectangle-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    color: #ff0040; /* Neon red title */
+    text-shadow: 0 0 10px #ff0040, 0 0 20px #ff0040;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+}
+
+.rectangles {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* Responsive for smaller screens */
+}
+
+.rectangle {
+    background-color: #1a1a1a;
+    border: 2px solid #ff0040;
+    border-radius: 12px;
+    padding: 30px;
+    width: 30%;
+    min-width: 250px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.rectangle:hover {
+    transform: scale(1.05);
+    background-color: #ff0040;
+    color: black;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8); /* Glowing effect on hover */
+}
+
+.rectangle-title {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+}
+
+.rectangle-subtitle {
+    font-size: 1.2em;
+    color: #ddd;
+    margin: 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    border-top: 3px solid #ff0040;
+}
+
+.footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+    text-shadow: 0 0 10px #ffcc00, 0 0 15px #ffcc00;
+}
+
+/* Social Media Links */
+.social-links {
+    margin: 30px 0;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 15px;
+    color: #0d2800;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s ease, border 0.3s ease, transform 0.3s ease;
+    border: 2px solid #001f56;
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Glow for links */
+}
+
+.social-link img {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+    filter: brightness(1.5);
+}
+
+.social-link:hover {
+    color: #fff;
+    border-color: #005e09;
+    background-color: #1a1a1a;
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8); /* Glow on hover */
+}
+
+/* New Section */
+.new-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #0d0d0d;
+}
+
+.new-image {
+    max-width: 75%;
+    height: auto;
+    border: 3px solid #ff0040;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Similar glow effect for continuity */
+    margin-bottom: 30px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.new-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+}
+
+.new-section .social-links {
+    margin-top: 30px;
+}
+
+.new-section .social-link {
+    font-size: 1.5em;
+    color: #ffcc00;
+    border: 2px solid #ff0040;
+    padding: 15px;
+    border-radius: 12px;
+    transition: color 0.3s ease, border 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+}
+
+.new-section .social-link:hover {
+    color: #fff;
+    border-color: #ffcc00;
+    background-color: #1a1a1a;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255, 204, 0, 0.8);
+}
+
+/* Smooth Scrolling for the Page */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Badass Header - Navigation Bar */
+/* Badass Header - Navigation Bar */
+/* Badass Header - Navigation Bar */
+.badass-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #0d0d0d; /* Solid dark background for a sleek look */
+    color: #ffffff; /* White text for contrast */
+    padding: 15px 0; /* Ample padding for a spacious feel */
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* Enhanced shadow for depth */
+    transition: background 0.4s, padding 0.4s; /* Smooth transitions */
+    font-family: 'Montserrat', sans-serif; /* Modern, geometric font */
+}
+
+.badass-header:hover {
+    background: #1a1a1a; /* Slightly lighter on hover */
+    padding: 10px 0; /* Reduce padding for a compact feel on hover */
+}
+
+.badass-header nav {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the nav items */
+    align-items: center; /* Vertically align items */
+}
+
+.badass-header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.badass-header nav ul li {
+    margin: 0 20px; /* Adequate spacing between items */
+    position: relative; /* Position for hover effects */
+}
+
+.badass-header nav ul li a {
+    color: #014b00; /* Gold color for links */
+    text-decoration: none;
+    font-size: 1.6em; /* Larger font size for visibility */
+    text-transform: uppercase;
+    font-weight: 600; /* Bold font weight for emphasis */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.badass-header nav ul li a:hover {
+    color: #ffffff; /* Change color on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Enhanced line under the menu items */
+.badass-header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #00ff3c; /* Gold line */
+    bottom: -5px; /* Position the line below the text */
+    left: 0;
+    transform: scaleX(0); /* Start invisible */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.badass-header nav ul li a:hover::after {
+    transform: scaleX(1); /* Line appears on hover */
+}
+
+/* Custom cursor for a unique touch */
+body {
+    cursor: url('images/custom-cursor.png'), auto; /* Custom badass cursor */
+}
+
+/* Optional responsive styles */
+@media (max-width: 768px) {
+    .badass-header nav ul {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .badass-header nav ul li {
+        margin: 10px 0; /* Adjust margins for vertical layout */
+    }
+
+    .badass-header nav ul li a {
+        font-size: 1.4em; /* Smaller font size for mobile */
+    }
+}
+
